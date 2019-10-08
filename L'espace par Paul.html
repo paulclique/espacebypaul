@@ -2,15 +2,28 @@
 <html>
 <head>
 	<title>L'espace par Paul CLIQUE</title>
+	<link rel="icon" type="image/x-icon" href="https://media2.giphy.com/media/IB9foBA4PVkKA/source.gif" />
 </head>
-<body style="background-color: blue; color: white">
 
-<h1 style="color: white">Bienvenue sur mon site internet de l'espace !</h1>
-<img width="600" height="450" src="https://images.pexels.com/photos/33684/astronaut-spacewalk-iss-tools.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+<body style="background-color: #f3efc7; color: blue">
 
+<nav class="crumbs">
+    <ol>
+        <li class="crumb"><a href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank">Site de l'ISS</a></li>
+        <li class="crumb"><a href="https://www.nasa.gov/" target="_blank">Site de la NASA</a></li>
+        <li class="crumb"><a href="https://www.youtube.com/watch?v=TMRcpUlSJfE" onclick="window.open(this.href, 'Popup', 'scrollbars=1,resizable=1,height=560,width=770'); return false;"> Vidéo sur la base spatiale de Baïkonour</a></li>
+    </ol>
+</nav>
+
+<h1 style="text-align: center;">Bienvenue sur mon site internet de l'espace !</h1>
+<br/>
+<br/>
+<img style="align-content: center;" width="600" height="450" src="https://images.pexels.com/photos/33684/astronaut-spacewalk-iss-tools.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+<br/>
+<br/>
 <p>L'espace désigne les zones de <b>l'Univers</b> situées au-delà des atmosphères et des corps célestes. Il s'agit de l'étendue de densité quasi nulle qui sépare les astres. On parle aussi de vide spatial. Selon les endroits de l'espace désignés, on le qualifie quelquefois d'espace cislunaire, interplanétaire, interstellaire (ou intersidéral) et intergalactique pour désigner plus précisément le vide spatial qui est délimité respectivement par le système <s>Terre-Lune, les planètes, les étoiles et les galaxies.</s>
 
-L'espace peut aussi se définir en opposition à <a href="http://education.meteofrance.fr/dossiers-thematiques/le-fonctionnement-de-l-atmosphere/la-composition-de-l-atmosphere/la-structure-de-latmosphere target="_blank">l'atmosphère terrestre.</a></p>
+L'espace peut aussi se définir en opposition à <a href="http://education.meteofrance.fr/dossiers-thematiques/le-fonctionnement-de-l-atmosphere/la-composition-de-l-atmosphere/la-structure-de-latmosphere" target="_blank">l'atmosphère terrestre.</a></p>
 
 <h2>Les frontières terrestres de l'espace</h2>
 
@@ -20,7 +33,7 @@ La densité de l'atmosphère et sa composition en <b><i>fonction de l'altitude �
 
 <ul>
 	<li>
-		Niveau de la mer - <a href="https://www.universalis.fr/encyclopedie/pression-atmospherique/1-les-unites-de-mesure-de-la-pression/ target="_blank">Pression atmosphérique </a>moyenne proche de un bar (conventionnellement 1013 hPa pour le modèle d'atmosphère standard ISO).
+		Niveau de la mer - <a href="https://www.universalis.fr/encyclopedie/pression-atmospherique/1-les-unites-de-mesure-de-la-pression/" target="_blank">Pression atmosphérique </a>moyenne proche de un bar (conventionnellement 1013 hPa pour le modèle d'atmosphère standard ISO).
 	</li>
 	<li>
 		<b><i><s>4,6 km (15 000 pieds) - FAA décrit comme nécessaire l'apport supplémentaire en oxygène pour les pilotes et passagers d'aéronefs.</s></i></b>
@@ -35,13 +48,55 @@ La densité de l'atmosphère et sa composition en <b><i>fonction de l'altitude �
 
 <h2>Mais à quoi ça ressemble vue de là haut ?</h2>
 
-<iframe width="600" height="450" src="https://www.youtube.com/embed/wnhvanMdx4s?start=150&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="muteYouTubeVideoPlayer"></div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+ function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('muteYouTubeVideoPlayer', {
+    videoId: 'wnhvanMdx4s', // YouTube Video ID
+    width: 600,               // Player width (in px)
+    height: 450,              // Player height (in px)
+    playerVars: {
+      autoplay: 1,        // Auto-play the video on load
+      controls: 1,        // Show pause/play buttons in player
+      showinfo: 0,        // Hide the video title
+      modestbranding: 1,  // Hide the Youtube Logo
+      loop: 1,            // Run the video in a loop
+      fs: 0,              // Hide the full screen button
+      cc_load_policty: 0, // Hide closed captions
+      iv_load_policy: 3,  // Hide the Video Annotations
+      autohide: 0         // Hide video controls when playing
+    },
+    events: {
+      onReady: function(e) {
+        e.target.mute();
+      }
+    }
+  });
+ }
+</script>
 
 <h2>Thomas Pesquet</h2> 
 
-<p><b>Thomas Pesquet</b> est le dixième Français à partir dans l'espace en décollant le 17 novembre 2016 à bord de Soyouz MS-03 dont l’équipage occupe la Station spatiale internationale de novembre 2016 à juin 2017. Durant cette mission, Thomas Pesquet a mené une centaine d'expériences dont la moitié développée par l'Agence spatiale européenne ou le CNES, l'autre moitié par la NASA. Il effectue deux sorties extravéhiculaires de six heures pour des missions de maintenance de la <a href="https://iss.cnes.fr/fr target="_blank"> Station spatiale internationale.</a></p>
+<p><b>Thomas Pesquet</b> est le dixième Français à partir dans l'espace en décollant le 17 novembre 2016 à bord de Soyouz MS-03 dont l’équipage occupe la Station spatiale internationale de novembre 2016 à juin 2017. Durant cette mission, Thomas Pesquet a mené une centaine d'expériences dont la moitié développée par l'Agence spatiale européenne ou le CNES, l'autre moitié par la NASA. Il effectue deux sorties extravéhiculaires de six heures pour des missions de maintenance de la <a href="https://iss.cnes.fr/fr" target="_blank"> Station spatiale internationale.</a></p>
 
 <iframe src="https://giphy.com/embed/2vq9pyw8I35n6dYMsf" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">L’essentiel des photos et vidéos est surtout sur mon compte Instagram <a href="https://t.co/6z6J3F1Wgf">https://t.co/6z6J3F1Wgf</a> ... mais oui la mission est finie ! Objectifs remplis et rdv sur la Lune 🌔 <a href="https://t.co/zvf278Th0T">https://t.co/zvf278Th0T</a></p>&mdash; Thomas Pesquet (@Thom_astro) <a href="https://twitter.com/Thom_astro/status/1167628723526332417?ref_src=twsrc%5Etfw">August 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h3>La radio de l'espace</h3>
+
+<script>(function (win, doc, script, source, objectName) { (win.RadionomyPlayerObject = win.RadionomyPlayerObject || []).push(objectName); win[objectName] = win[objectName] || function (k, v) { (win[objectName].parameters = win[objectName].parameters || { src: source, version: '1.1' })[k] = v; }; var js, rjs = doc.getElementsByTagName(script)[0]; js = doc.createElement(script); js.async = 1; js.src = source; rjs.parentNode.insertBefore(js, rjs); }(window, document, 'script', 'https://www.radionomy.com/js/radionomy.player.js', 'radplayer'));
+radplayer('url', 'hitpartybypulsradio');
+radplayer('type', 'horizontal');
+radplayer('autoplay', '1');
+radplayer('volume', '50');
+radplayer('color1', '#f1ffc4');
+radplayer('color2', '#ff844f');
+</script>
+<div class="radionomy-player"></div>
 
 </body>
 </html>
